@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaFigma } from 'react-icons/fa';
 import { SiJavascript, SiHtml5, SiCss3, SiTypescript, SiReact, SiVuedotjs, SiMongodb } from 'react-icons/si';
-import profileImage from '../assets/wo.png';
+import profileImage from '../assets/cat.png';
 
 interface Skill {
   icon: JSX.Element;
