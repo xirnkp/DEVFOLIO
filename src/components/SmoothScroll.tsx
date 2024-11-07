@@ -1,31 +1,27 @@
-// src/components/SmoothScroll.tsx
-import React, { useEffect, useRef } from 'react';
-import LocomotiveScroll from 'locomotive-scroll';
+import React, { useEffect } from 'react';
+import Lenis from '@studio-freight/lenis';
 
-const SmoothScroll: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const scrollInstance = useRef<LocomotiveScroll | null>(null);
-
+const SmoothScroll: React.FC = () => {
   useEffect(() => {
-    if (scrollRef.current) {
-      scrollInstance.current = new LocomotiveScroll({
-        el: scrollRef.current,
-        smooth: true,
-      });
-    }
+    const lenis = new Lenis({
+      duration: 1.2, 
+      easing: (t: number) => t * (2 - t), 
+      smoothWheel: true, 
+    });
+
+    const animate = (time: number) => {
+      lenis.raf(time); 
+      requestAnimationFrame(animate); 
+    };
+
+    requestAnimationFrame(animate);
 
     return () => {
-      if (scrollInstance.current) {
-        scrollInstance.current.destroy();
-      }
+      lenis.destroy();
     };
   }, []);
 
-  return (
-    <div data-scroll-container ref={scrollRef}>
-      {children}
-    </div>
-  );
+  return null;
 };
 
 export default SmoothScroll;

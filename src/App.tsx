@@ -5,29 +5,22 @@ import AboutMe from './components/AboutMe';
 import Skills from './components/Skills';
 import Education from './components/Education';
 import Footer from './components/Footer';
+import LoadingScreen from './components/LoadingScreen'; // Import LoadingScreen
+import SmoothScroll from './components/SmoothScroll'; // Import SmoothScroll
 
 import { SiJavascript, SiTypescript, SiMongodb, SiHtml5, SiCss3 } from "react-icons/si";
 import { FaReact, FaNodeJs, FaGit } from 'react-icons/fa';
 import Project from './components/Project';
-import SmoothScroll from './components/SmoothScroll';
 
 const App: React.FC = () => {
   const [profileImage, setProfileImage] = useState("assets/Me.jpeg");
   const [projects, setProjects] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true); 
 
-  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.files && event.target.files[0]) {
-      const file = event.target.files[0];
-      const imageUrl = URL.createObjectURL(file);
-      setProfileImage(imageUrl);
-    }
-  };
-
-  
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/pinned-repos'); 
+        const response = await fetch('http://localhost:5000/api/pinned-repos');
         const data = await response.json();
         setProjects(data);
       } catch (error) {
@@ -36,6 +29,10 @@ const App: React.FC = () => {
     };
 
     fetchProjects();
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000); 
   }, []);
 
   const skills = [
@@ -61,9 +58,11 @@ const App: React.FC = () => {
 
   return (
     <div className="bg-black text-gray-100">
-      <Navbar />
+      {loading && <LoadingScreen />} 
+      {!loading && <Navbar />}
+      <SmoothScroll />
       <HeroSection />
-      <AboutMe /> 
+      <AboutMe />
       <Skills skills={skills} />
       <Education educationHistory={educationHistory} />
       <Project />
