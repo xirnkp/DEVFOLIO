@@ -49,7 +49,7 @@ const App: React.FC = () => {
     {
       institution: 'SMK Negeri 4 Bandung',
       degree: 'Software Engineering',
-      period: '2016 - 2020',
+      period: '2022 - now',
       location: 'Bandung, Indonesia',
       description: 'Studied software development, database management and games.'
     }
