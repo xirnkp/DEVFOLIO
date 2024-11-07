@@ -107,7 +107,7 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
               className="group flex flex-col items-center text-center mb-6"
             >
               <div
-                className={`text-5xl mb-2 text-gray-500 transition-all duration-300 ease-in-out 
+                className={`text-5xl mb-2 text-purple-500 transition-all duration-300 ease-in-out 
                            group-hover:scale-105 group-hover:translate-y-[-5px] ${
                              skill.label === 'JavaScript' ? 'group-hover:text-[#ffff00]' :
                              skill.label === 'React' ? 'group-hover:text-cyan-500' :
@@ -120,7 +120,7 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
                 {skill.icon}
               </div>
               <h3
-                className={`text-lg font-semibold text-gray-500 transition-all duration-300 ease-in-out 
+                className={`text-lg font-semibold text-purple-500 transition-all duration-300 ease-in-out 
                            group-hover:scale-105 group-hover:translate-y-[-5px] ${
                              skill.label === 'JavaScript' ? 'group-hover:text-[#ffff00]' :
                              skill.label === 'React' ? 'group-hover:text-cyan-500' :
