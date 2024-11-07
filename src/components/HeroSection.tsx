@@ -20,7 +20,8 @@ const HeroSectionWithProfile: React.FC = () => {
   };
 
   return (
-    <section className="mb-[30vh] relative text-white h-auto py-16 lg:py-24 bg-gradient-to-b from-purple-900 via-blue-900 to-black overflow-hidden">
+    <section className="mb-[30vh] relative text-white h-auto py-16 lg:py-24 bg-gradient-to-b from-purple-900 
+                        via-blue-900 to-black overflow-hidden">
       <div className="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center">
         {/* Hero Content */}
         <motion.div
@@ -32,7 +33,8 @@ const HeroSectionWithProfile: React.FC = () => {
         >
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-center lg:text-left">Hi all, I'm Aji 👋</h1>
           <p className="text-2xl lg:text-4xl mb-4 font-normal text-center lg:text-left">
-            A passionate Full Stack Software 🚀 Engineering student experienced in building web and mobile applications, with a strong foundation in development and design.
+            A passionate Full Stack Software 🚀 Engineering student experienced in building web and mobile applications, 
+            with a strong foundation in development and design.
           </p>
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
             <motion.a
@@ -87,9 +89,13 @@ const HeroSectionWithProfile: React.FC = () => {
         <motion.div
           className="flex-1 flex items-center justify-center mt-8 lg:mt-0"
           initial="hidden"
-          animate="visible"
-          variants={fadeIn}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          animate={{ x: [0, 20, 0, -20, 0], rotate: [0, 10, 0, -10, 0] }} 
+          transition={{
+            duration: 2,  
+            repeat: Infinity,  
+            repeatType: 'loop',  
+            ease: 'easeInOut',
+          }}
         >
           <img 
             src={catImage} 

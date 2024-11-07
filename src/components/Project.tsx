@@ -33,7 +33,8 @@ const Project: React.FC = () => {
   return (
     <section id="projects" className="container mx-auto p-6 mb-[16vh]">
       <div className="flex justify-center">
-        <p className="uppercase font-bold tracking-widest bg-gradient-to-r from-custom-green to-custom-gray text-center bg-clip-text text-transparent">
+        <p className="uppercase font-bold tracking-widest bg-gradient-to-r from-custom-green to-custom-gray 
+                      text-center bg-clip-text text-transparent">
           What Have I Done?
         </p>
       </div>
@@ -50,7 +51,8 @@ const Project: React.FC = () => {
               href={repo.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-black text-white p-6 shadow-lg transform transition-all hover:scale-105 hover:bg-purple-600 relative rounded-lg hover:shadow-md"
+              className="bg-black text-white p-6 shadow-lg transform transition-all hover:scale-105 hover:bg-purple-600 
+                         relative rounded-lg hover:shadow-md"
               style={{
                 boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)', 
                 transition: 'transform 0.3s, box-shadow 0.3s',
@@ -70,7 +72,8 @@ const Project: React.FC = () => {
 
                 <div className="flex justify-between items-center mt-6">
                   <span className="text-lg text-white hover:text-custom-dark">{repo.stars} ⭐</span>
-                  <span className="bg-clip-text bg-gradient-to-r from-custom-green to-custom-gray text-transparent hover:underline text-white">
+                  <span className="bg-clip-text bg-gradient-to-r from-custom-green to-custom-gray text-transparent 
+                                  hover:underline text-white">
                     View on GitHub
                   </span>
                 </div>

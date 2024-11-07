@@ -5,7 +5,7 @@ import Education from './components/Education';
 import Footer from './components/Footer';
 import Project from './components/Project';
 import { SiJavascript, SiTypescript, SiMongodb, SiHtml5, SiCss3 } from "react-icons/si";
-import { FaReact, FaNodeJs, FaGit } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaGit, FaFigma } from 'react-icons/fa';
 
 const ScrollPage: React.FC = () => {
   const [profileImage, setProfileImage] = useState("assets/Me.jpeg");
@@ -42,7 +42,7 @@ const ScrollPage: React.FC = () => {
     { icon: <SiCss3 />, label: 'CSS' },
     { icon: <FaNodeJs />, label: 'Node.js' },
     { icon: <SiMongodb />, label: 'MongoDB' },
-    { icon: <FaGit />, label: 'Git' }
+    { icon: <FaFigma />, label: 'Figma' }
   ];
 
   const educationHistory = [
@@ -51,7 +51,7 @@ const ScrollPage: React.FC = () => {
       degree: 'Software Engineering',
       period: '2016 - 2020',
       location: 'Bandung, Indonesia',
-      description: 'Studied software development, networking, and database management.'
+      description: 'Studied software development, database management and games.'
     }
   ];
 

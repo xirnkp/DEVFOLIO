@@ -29,7 +29,8 @@ const Navbar: React.FC = () => {
   }, [lastScrollY]); 
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'} bg-gradient-to-r from-blue-900 via-purple-900 to-black shadow-lg py-4`}>
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}
+                         bg-gradient-to-r from-blue-900 via-purple-900 to-black shadow-lg py-4`}>
       <nav className="container mx-auto flex justify-between items-center text-white relative">
         <h1 className="text-3xl font-bold">4PEM</h1>
         <div className="hidden md:flex items-center space-x-6">
@@ -37,7 +38,8 @@ const Navbar: React.FC = () => {
           <a href="#skills" className="hover:text-purple-300">Skill</a>
           <a href="#education" className="hover:text-purple-300">Education</a>
           <a href="#projects" className="hover:text-purple-300">Project</a>
-          <a href="mailto:ajipermana0890@gmail.com" className="hover:text-purple-300">Contact Me</a>
+          <a href="mailto:ajipermana0890@gmail.com" className="px-6 py-3 bg-purple-600 rounded-lg text-white 
+                   font-semibold hover:bg-purple-700 transition duration-300">Contact Me</a>
         </div>
         
         <div className="md:hidden">
