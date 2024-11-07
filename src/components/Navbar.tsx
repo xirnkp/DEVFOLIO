@@ -58,7 +58,6 @@ const Navbar: React.FC = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu with Smooth Animation */}
       <div
         className={`md:hidden fixed inset-x-0 top-16 bg-black/85 px-6 py-8 shadow-lg transform transition-all duration-300 ease-in-out ${
           isMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
