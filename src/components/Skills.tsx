@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaFigma } from 'react-icons/fa'; 
-import { SiJavascript, SiHtml5, SiCss3, SiTypescript, SiReact, SiVuedotjs, SiMongodb } from 'react-icons/si'; 
-import profileImage from '../assets/wo.png'; 
+import { FaFigma } from 'react-icons/fa';
+import { SiJavascript, SiHtml5, SiCss3, SiTypescript, SiReact, SiVuedotjs, SiMongodb } from 'react-icons/si';
+import profileImage from '../assets/wo.png';
 
 interface Skill {
   icon: JSX.Element;
@@ -52,13 +52,13 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
       case 'React':
         return { icon: <SiReact size={40} />, label: 'React' };
       case 'Vue.js':
-        return { icon: <SiVuedotjs size={40} />, label: 'Vue.js' };  
+        return { icon: <SiVuedotjs size={40} />, label: 'Vue.js' };
       case 'MongoDB':
         return { icon: <SiMongodb size={40} />, label: 'MongoDB' };
       case 'Node.js':
-        return { icon: <SiVuedotjs size={40} />, label: 'Node.js' };  
+        return { icon: <SiVuedotjs size={40} />, label: 'Node.js' };
       case 'Figma':
-        return { icon: <FaFigma size={40} />, label: 'Figma' };  
+        return { icon: <FaFigma size={40} />, label: 'Figma' };
       default:
         return skill;
     }
@@ -82,14 +82,13 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
           ease: 'easeInOut',
         }}
       >
-        <img
-          id="profile-image"
-          src={profileImage}
-          alt="Profile"
-          width={400}
-          height={400}
-          className="shadow-2xl transform"
-        />
+<img
+  id="profile-image"
+  src={profileImage}
+  alt="Profile"
+  className="w-40 h-40 sm:w-96 sm:h-96 shadow-2xl transform"
+/>
+
       </motion.div>
 
       {/* Skills list */}

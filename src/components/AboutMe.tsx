@@ -35,7 +35,7 @@ const AboutMe: React.FC = () => {
       initial={{ opacity: 0, x: -50 }}
       animate={controls}
       transition={{ duration: 0.5 }}
-      className="flex flex-col mb-[40vh] md:flex-row items-start justify-start 
+      className="flex flex-col mb-[40vh] md:flex-row items-center md:items-start justify-center 
                  space-y-6 md:space-y-0 md:space-x-8 mt-20 px-4 sm:px-8 md:px-16"
     >
       <div className="relative flex-shrink-0 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 
