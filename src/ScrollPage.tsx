@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
 import AboutMe from './components/AboutMe';
 import Skills from './components/Skills';
 import Education from './components/Education';
 import Footer from './components/Footer';
-
+import Project from './components/Project';
 import { SiJavascript, SiTypescript, SiMongodb, SiHtml5, SiCss3 } from "react-icons/si";
 import { FaReact, FaNodeJs, FaGit } from 'react-icons/fa';
-import Project from './components/Project';
-import SmoothScroll from './components/SmoothScroll';
 
-const App: React.FC = () => {
+const ScrollPage: React.FC = () => {
   const [profileImage, setProfileImage] = useState("assets/Me.jpeg");
   const [projects, setProjects] = useState<any[]>([]);
 
+  // Handle image change
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files[0]) {
       const file = event.target.files[0];
@@ -23,7 +20,6 @@ const App: React.FC = () => {
     }
   };
 
-  
   useEffect(() => {
     const fetchProjects = async () => {
       try {
@@ -60,16 +56,14 @@ const App: React.FC = () => {
   ];
 
   return (
-    <div className="bg-black text-gray-100">
-      <Navbar />
-      <HeroSection />
-      <AboutMe /> 
+    <div className="container mx-auto py-10 bg-black text-white">
+      <AboutMe />
       <Skills skills={skills} />
       <Education educationHistory={educationHistory} />
-      <Project />
+      <Project />  
       <Footer />
     </div>
   );
 };
 
-export default App;
+export default ScrollPage;
