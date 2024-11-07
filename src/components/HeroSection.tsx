@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaEnvelope, FaInstagram } from 'react-icons/fa';
-import catImage from '../assets/cat.png'; 
+import catImage from '../assets/cat.png';
 
 const HeroSectionWithProfile: React.FC = () => {
   const fadeInUp = {
@@ -32,10 +32,11 @@ const HeroSectionWithProfile: React.FC = () => {
         >
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-center lg:text-left">Hi all, I'm Aji 👋</h1>
           <p className="text-2xl lg:text-4xl mb-4 font-normal text-center lg:text-left">
-          A passionate Full Stack Software 🚀 Engineering student experienced in building web and mobile applications, with a strong foundation in development and design.
+            A passionate Full Stack Software 🚀 Engineering student experienced in building web and mobile applications, with a strong foundation in development and design.
           </p>
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
-            <motion.button
+            <motion.a
+              href="mailto:ajipermana0890@gmail.com"
               className="px-8 py-4 bg-purple-600 rounded-lg text-white font-semibold hover:bg-purple-700 transition duration-300"
               initial="hidden"
               animate="visible"
@@ -43,16 +44,19 @@ const HeroSectionWithProfile: React.FC = () => {
               transition={{ duration: 0.5 }}
             >
               Contact Me
-            </motion.button>
-            <motion.button
+            </motion.a>
+            <motion.a
+              href="https://drive.google.com/drive/folders/1pHiq3RgXY7TmowbJ3QZqLmg3xtf_zgOY?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 bg-purple-600 rounded-lg text-white font-semibold hover:bg-purple-700 transition duration-300"
               initial="hidden"
               animate="visible"
               variants={slideIn}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              Download My Resume
-            </motion.button>
+              My Resume
+            </motion.a>
           </div>
           
           {/* Social Media Icons */}
@@ -61,7 +65,6 @@ const HeroSectionWithProfile: React.FC = () => {
               { icon: <FaGithub />, link: 'https://github.com/xirnkp' },
               { icon: <FaInstagram />, link: 'https://instagram.com/4pemmm' },
               { icon: <FaEnvelope />, link: 'mailto:ajipermana0890@gmail.com' }
-
             ].map((social, index) => (
               <motion.a
                 key={index}

@@ -42,8 +42,8 @@ const AboutMe: React.FC = () => {
       </div>
       <div className="text-left">
         <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-blue-500 mb-4 text-center lg:text-left">About Me</h2>
-        <p className="text-lg sm:text-xl md:text-2xl mb-4 font-normal text-center lg:text-left">
-          My name is Aji Permana. I'm a fresh graduate from the System Information Department at SMK Negeri 4 Bandung, and I'm passionate about IT and software engineering.
+        <p className="text-lg sm:text-xl md:text-4xl mb-4 font-normal text-center lg:text-left">
+        My name is Aji Permana, a student of Software Engineering at SMK Negeri 4 Bandung, who enjoys computers and music. I have strong skills in analysis and adaptation and am passionate about IT and software engineering.
         </p>
       </div>
     </motion.div>
