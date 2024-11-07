@@ -113,7 +113,7 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
                              skill.label === 'React' ? 'group-hover:text-cyan-500' :
                              skill.label === 'HTML' ? 'group-hover:text-[#FFA500]' :
                              skill.label === 'MongoDB' ? 'group-hover:text-green-500' :
-                             skill.label === 'Figma' ? 'group-hover:text-purple-500' :
+                             skill.label === 'Figma' ? 'group-hover:text-red-500' :
                              'group-hover:text-blue-500'
                            } group-hover:drop-shadow-[0_0_10px_#4fa3ff]`}
               >
@@ -126,7 +126,7 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
                              skill.label === 'React' ? 'group-hover:text-cyan-500' :
                              skill.label === 'HTML' ? 'group-hover:text-[#FFA500]' :
                              skill.label === 'MongoDB' ? 'group-hover:text-green-500' :
-                             skill.label === 'Figma' ? 'group-hover:text-purple-500' :
+                             skill.label === 'Figma' ? 'group-hover:text-red-500' :
                              'group-hover:text-blue-500'
                            }`}
               >
