@@ -83,7 +83,7 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
         }}
       >
 <img
-  id="profile-image"
+  id="skills"
   src={profileImage}
   alt="Profile"
   className="w-40 h-40 sm:w-96 sm:h-96 shadow-2xl transform"
